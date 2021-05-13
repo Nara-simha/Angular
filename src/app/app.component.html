@@ -1,23 +1,9 @@
-<div class="mx-auto mt-5 text-center" style="max-width: 700px;">
-    <h1 class="bg-info mt-5">USERS</h1>
-    <div class="form-floating m-3">
-        <input type="text" class="form-control" #ref>
-        <label for="">Enter user</label>
-    </div>
-    <button class="btn mt-3 btn-success" (click)="sendUser(ref.value); ref.value='' ">Add user</button>
-    <div class="accordion" id="ar">
-        <!--accordian-->
-        <div class="accordion-item mt-5 m-2">
-            <div class="accordion-header">
-                <button class="accordion-button bg-danger text-white" (click)="changeStatus()" data-bs-toggle="collapse" data-bs-target="#a1" >{{status? "Show users":"Hide users"}}</button>
-            </div>
-        </div>
-        <div class="accordion-collapse collapse" id="a1" data-bs-parent="#ar">
-        <div class="accordion-body " >
-            <h3>USERS</h3>
-            <h4 *ngFor="let user of ar; let idx=index" class="item shadow mx-auto w-50">{{user}}
-                <button class="btn btn-danger btn-sm float-end " (click)="deleteUser(idx)" ><i class="fas fa-user-slash"></i></button>
-            </h4>
-        </div>
-        </div>
+<div class="container">
+    <h1 class="display-3 text-center text-info">Products mangement system</h1>
+</div>
+<div class="container">
+    <app-products></app-products>
+</div>
+<div style="position: absolute; bottom: 0px; width:100% ;">
+    <app-footer></app-footer>
 </div>
