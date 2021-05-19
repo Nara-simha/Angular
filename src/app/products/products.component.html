@@ -1,1 +1,9 @@
-<app-product-details></app-product-details>
+<h5>Number of Products selected:{{c}}</h5>
+<p *ngFor="let product of productSelected">{{product}}</p>
+
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
+    <div class="col" *ngFor="let prObj of products">
+        <app-product-details [productObj]=prObj (myEvent)="getProductDetails($event)"></app-product-details>
+    </div>
+</div>

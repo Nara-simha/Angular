@@ -1,8 +1,8 @@
-<div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
+<div class="card bg-dark text-white m-3">
+    <img [src]=productObj.productImage width="31%" class="d-block mx-auto" >
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h4 class="card-title">{{productObj.productTitle}}</h4>
+      <p class="card-text">Price:{{productObj.description}}</p>
+      <a href="#" class="btn btn-primary" (click)="addProduct(productObj.productTitle)"><i class="fas fa-plus-square"></i> add to cart</a>
     </div>
   </div>
