@@ -8,11 +8,4 @@ import { Product } from '../models/product.model';
 })
 export class ProductDetailsComponent{
   @Input() productObj:Product;
-
-  // custom event
-  @Output() myEvent= new EventEmitter();
-
-  addProduct(productName){
-    this.myEvent.emit(productName);
-  }
 }

@@ -1,9 +1,17 @@
-<h5>Number of Products selected:{{c}}</h5>
-<p *ngFor="let product of productSelected">{{product}}</p>
 
 
-<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-    <div class="col" *ngFor="let prObj of products">
-        <app-product-details [productObj]=prObj (myEvent)="getProductDetails($event)"></app-product-details>
-    </div>
+<ul class="nav nav-pills justify-content-evenly mt-4">
+    <li class="nav-item rounded-pill">
+      <a class="nav-link"  routerLink="mobiles" routerLinkActive="active">Mobiles</a>
+    </li>
+    <li class="nav-item rounded-pill">
+      <a class="nav-link" routerLink="bikes" routerLinkActive="active">Bikes</a>
+    </li>
+    <li class="nav-item rounded-pill">
+      <a class="nav-link" routerLink="televisions" routerLinkActive="active">Televisions</a>
+    </li>
+</ul>
+
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
